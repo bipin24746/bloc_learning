@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:bloc_learning/bloc/counter_bloc/counter_bloc.dart';
+import 'package:bloc_learning/bloc/posts/posts_bloc.dart';
 import 'package:bloc_learning/bloc/switch_example/switch_bloc.dart';
 import 'package:bloc_learning/bloc/todo_bloc/to_do_bloc.dart';
 import 'package:bloc_learning/ui/counter/counter_screen.dart';
+import 'package:bloc_learning/ui/posts/posts_screen.dart';
 import 'package:bloc_learning/ui/switch/switch_example_screen.dart';
 import 'package:bloc_learning/ui/todo/to_do.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -29,10 +32,11 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (_) => SwitchBloc()), // Provide SwitchBloc
           BlocProvider(create: (_) => CounterBloc()), // Provide CounterBloc
-          BlocProvider(create: (_) => ToDoBloc())
+          BlocProvider(create: (_) => ToDoBloc()),
+          BlocProvider(create: (_) => PostBloc()),
         ],
         child:
-            ToDoApp(), // You can switch between this and CounterScreen
+            PostsScreen(), // You can switch between this and CounterScreen
       ),
     );
   }

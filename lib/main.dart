@@ -6,6 +6,7 @@ import 'package:bloc_learning/bloc/repository/product/product_repository.dart';
 import 'package:bloc_learning/bloc/switch_example/switch_bloc.dart';
 import 'package:bloc_learning/bloc/todo_bloc/to_do_bloc.dart';
 import 'package:bloc_learning/ui/counter/counter_screen.dart';
+import 'package:bloc_learning/ui/login_page/login_screen.dart';
 import 'package:bloc_learning/ui/posts/posts_screen.dart';
 import 'package:bloc_learning/ui/product_screen/product_screen.dart';
 import 'package:bloc_learning/ui/switch/switch_example_screen.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (_) => ProductBloc()),
         ],
         child:
-            ProductScreen(), // You can switch between this and CounterScreen
+            LoginScreen(), // You can switch between this and CounterScreen
       ),
     );
   }

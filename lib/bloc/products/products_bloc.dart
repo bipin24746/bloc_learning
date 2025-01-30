@@ -1,13 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:bloc_learning/bloc/products/products_event.dart';
+import 'package:bloc_learning/bloc/products/products_state.dart';
 
-part 'products_event.dart';
-part 'products_state.dart';
+class ProductBloc extends Bloc<ProductEvent,ProductState>{
+  ProductBloc():super(const ProductState());
 
-class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
-  ProductsBloc() : super(ProductsInitial()) {
-    on<ProductsEvent>((event, emit) {
-      // TODO: implement event handler
-    });
-  }
+
 }

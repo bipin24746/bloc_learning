@@ -1,4 +1,8 @@
-part of 'products_bloc.dart';
+import 'package:equatable/equatable.dart';
 
-@immutable
-sealed class ProductsEvent {}
+class ProductEvent extends Equatable{
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+
+}

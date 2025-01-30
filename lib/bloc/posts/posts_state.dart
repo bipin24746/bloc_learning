@@ -1,4 +1,4 @@
-import 'package:bloc_learning/model/posts_model.dart';
+import 'package:bloc_learning/model/post/posts_model.dart';
 import 'package:bloc_learning/utils/post_enums/enums.dart';
 import 'package:equatable/equatable.dart';
 
